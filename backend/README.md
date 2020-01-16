@@ -13,3 +13,12 @@ Projeto de estudo desenvolvido com a stack: Node.JS, Express, React.JS React Nat
 
 // mongodb+srv://blsdev:JYgpCcAHLnPk3wNh@cluster0-tniu4.mongodb.net/test?retryWrites=true&w=majority
 
+```React.JS```
+
+### Três conceitos principais do React:
+
+* Componente: Bloco isolado de HTML, CSS e JS, o qual não intefere no restante da aplicação
+* Propriedade: Informaçõwes que um componente PAI passa para um componente filho
+* Estado: Informações mantidas pelo componente (Lembrar: Conceito de imutabilidade)
+
+
