@@ -4,6 +4,10 @@ const socket = socketio('http://192.168.0.8:3333', {
   autoConnect: false,
 })
 
+function subscribeToNewDevs(subscribeFunction) {
+  socket.on('new-dev', subscribeFunction);
+}
+
 function connect(latitude, longitude, techs) {
   socket.io.opts.query ={
     latitude,
@@ -14,13 +18,9 @@ function connect(latitude, longitude, techs) {
   if (socket.disconnected) {
     socket.connect();
   }
-
-  socket.on('message', text => {
-    console.log(text);
-  })
 }
 
-function disconect() {
+function disconnect() {
   if (socket.connected) {
     socket.disconnect();
   }
@@ -28,5 +28,6 @@ function disconect() {
 
 export {
   connect,
-  disconect,
+  disconnect,
+  subscribeToNewDevs,
 };
